@@ -61,6 +61,8 @@ app.get("/everyone/:name", function(req, res) {
   });
 });
 
+
+
 // GET /everyone/:name/sprint
 
 // GET /everyone/:name/endurance
