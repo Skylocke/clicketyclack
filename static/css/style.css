@@ -1,0 +1,24 @@
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.clicker-stats {
+  width: 100%;
+}
+
+.stats-row {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 200px;
+}

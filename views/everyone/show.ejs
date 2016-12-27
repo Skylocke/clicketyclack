@@ -1,0 +1,24 @@
+<div class="col-xs-12 clicker-stats text-center">
+  <div class="stats-row col-xs-12">
+    <div id="sprint-clicks" class="stat col-xs-4">
+      <h3 class="row"><%= clicker.sprintBest %></h3>
+      <h4 class="row">best sprint score</h4>
+      <a href="/everyone/<%= clicker.name %>/sprint" class="btn btn-default row">go for a sprint</a>
+    </div>
+    <div id="regular-clicks" class="stat col-xs-4">
+      <h1 class="row"><%= clicker.clicks %></h1>
+      <h4 class="row">total clicks</h4>
+      <a href="/everyone/<%= clicker.name %>/clickety" class="btn btn-default row">click for leisure</a>
+    </div>
+    <div id="endurance-clicks" class="stat col-xs-4">
+      <h3 class="row"><%= clicker.enduranceBest %></h3>
+      <h4 class="row">best endurance score</h4>
+      <a href="/everyone/<%= clicker.name %>/endurance" class="btn btn-default row">go for a long run</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 text-left">
+      <h2>clicker stats for <%= clicker.name %></h2>
+    </div>
+  </div>
+</div>
