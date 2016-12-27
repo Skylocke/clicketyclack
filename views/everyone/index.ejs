@@ -5,7 +5,6 @@
       <th>#</th>
       <th>who</th>
       <th>clicks</th>
-      <th>sprint</th>
     </tr>
   </thead>
   <tbody>
@@ -14,7 +13,6 @@
         <th scope="row"><%= i+1 %></th>
         <td><a href="/everyone/<%= clickers[i].name %>"><%= clickers[i].name %></a></td>
         <td><span class="bar"></span><%= clickers[i].clicks %></td>
-        <td><%= clickers[i].sprintBest %></td>
       </tr>
     <% }; %>
   </tbody>
