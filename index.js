@@ -45,7 +45,9 @@ app.post("/new", function(req, res) {
 // view: views/everyone/index.ejs
 // purpose: displays all clickers and clicks (ranked by clicks, hopefully, or modular later)
 app.get("/everyone", function(req, res) {
-  db.clickers.findAll({ order: "clicks" }).then(function(clickers) {
+  db.clickers.findAll({ order: [
+      ['clicks', 'DESC']
+    ] }).then(function(clickers) {
     res.render("everyone/index", { clickers: clickers });
   });
 });
@@ -61,7 +63,14 @@ app.get("/everyone/:name", function(req, res) {
   });
 });
 
-
+// PUT /everyone/:name
+app.put("/everyone/:name", function(req, res) {
+  var name = req.params.name;
+  db.clickers.update(req.body,
+    { where:
+      { name: name }
+    });
+});
 
 // GET /everyone/:name/sprint
 
